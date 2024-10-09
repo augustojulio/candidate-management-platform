@@ -20,38 +20,38 @@ A simple platform to manage candidates in a recruitment process, built with Djan
 - **Testing**: Unittest for unit tests.
 - **Docker**: Docker setup for containerization.
 
-  candidate-management-platform/
-  ├── backend/
-  │   ├── Dockerfile
-  │   ├── docker-compose.yml
-  │   ├── pyproject.toml
-  │   ├── poetry.lock
-  │   ├── manage.py
-  │   ├── backend/
-  │   │   ├── __init__.py
-  │   │   ├── settings.py
-  │   │   ├── urls.py
-  │   │   └── wsgi.py
-  │   └── candidates/
-  │       ├── __init__.py
-  │       ├── models.py
-  │       ├── views.py
-  │       ├── serializers.py
-  │       └── tests.py
-  └── frontend/
-      ├── package.json
-      ├── public/
-      └── src/
-          ├── App.js
-          ├── components/
-          │   ├── CandidateList.js
-          │   ├── CandidateDetail.js
-          │   └── Dashboard.js
-          └── services/
-              └── api.js
-          └── index.js
 
----
+  <pre class="!overflow-visible"><div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-markdown">- **candidate-management-platform/**: Root directory of the project.
+      - **backend/**: Contains the Django backend code and configurations.
+          - **Dockerfile**: Configuration for Docker container.
+          - **docker-compose.yml**: Defines services for the application.
+          - **pyproject.toml**: Dependency management with Poetry.
+          - **poetry.lock**: Locked versions of dependencies.
+          - **manage.py**: Django management script.
+          - **backend/**: Main Django application.
+              - **\_\_init\_\_.py**: Package marker.
+              - **settings.py**: Project settings.
+              - **urls.py**: URL routing.
+              - **wsgi.py**: WSGI application entry point.
+          - **candidates/**: Django app for managing candidates.
+              - **\_\_init\_\_.py**: Package marker.
+              - **models.py**: Database models for candidates.
+              - **views.py**: API views for candidates.
+              - **serializers.py**: Data serialization for API responses.
+              - **tests.py**: Unit tests for the candidates app.
+      - **frontend/**: Contains the React frontend code.
+          - **package.json**: Project metadata and dependencies.
+          - **public/**: Static files for the React app.
+          - **src/**: Source code for the React application.
+              - **App.js**: Main application component.
+              - **components/**: React components.
+                  - **CandidateList.js**: Component for listing candidates.
+                  - **CandidateDetail.js**: Component for displaying candidate details.
+                  - **Dashboard.js**: Component for the dashboard.
+              - **services/**: API service files.
+                  - **api.js**: Configuration for API calls.
+              - **index.js**: Entry point for the React app.
+  </code></div></div></pre>
 
 ## Prerequisites
 
