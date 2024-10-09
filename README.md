@@ -147,6 +147,8 @@ In the Authorize botton in the top of the page, paste it in this format (you nee
 
 Bearer <your_access_token_value>
 
+The token expiration time is short
+
 After authorizing the API, you need to create a Client, then a Job, then a Recruiter and finally a Candidate.
 
 Remember that when creating a Job, Swagger will give the example json:
@@ -159,6 +161,10 @@ Remember that when creating a Job, Swagger will give the example json:
 }`
 
 Check your client_id, as it will start at 1 and not 0.
+
+And, in your frontend View_Candidate_Detail, you need to manually pass the candidate's :id number in the url:
+
+http://localhost:3000/candidates/:id
 
 ## Key Decisions
 

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from rest_framework.routers import DefaultRouter
 from django.urls import path, include
-from .views import CandidateViewSet, ClientViewSet, JobViewSet, RecruiterViewSet
+from .views import CandidateViewSet, ClientViewSet, JobViewSet, RecruiterViewSet, MetricsView
 
 router = DefaultRouter()
 router.register(r'candidates', CandidateViewSet, basename='candidate')
@@ -26,4 +26,5 @@ router.register(r'recruiters', RecruiterViewSet, basename='recruiter')
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('metrics/', MetricsView.as_view(), name='metrics'),
 ]
