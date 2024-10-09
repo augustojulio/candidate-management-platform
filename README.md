@@ -21,42 +21,35 @@ A simple platform to manage candidates in a recruitment process, built with Djan
 - **Docker**: Docker setup for containerization.
 
   candidate-management-platform/
-
-  |
-  ├──backend/
-  │
-  ├── Dockerfile
-  ├── docker-compose.yml
-  ├── pyproject.toml
-  ├── poetry.lock
-  ├── manage.py
   ├── backend/
-  │   ├── __init__.py
-  │   ├── settings.py
-  │   ├── urls.py
-  │   └── wsgi.py
-  └── candidates/
-  |    ├── __init__.py
-  |    ├── models.py
-  |    ├── views.py
-  |    ├── serializers.py
-  └──└── tests.py
-
-  ├──frontend/
-  |
-
-  ├── package.json
-
-  ├── public/
-  ├── src/
-  │   ├── App.js
-  │   ├── components/
-  │   │   ├── CandidateList.js
-  │   │   ├── CandidateDetail.js
-  │   │   └── Dashboard.js
-  │   ├── services/
-  │   │   └── api.js
-  └── └── index.js
+  │   ├── Dockerfile
+  │   ├── docker-compose.yml
+  │   ├── pyproject.toml
+  │   ├── poetry.lock
+  │   ├── manage.py
+  │   ├── backend/
+  │   │   ├── __init__.py
+  │   │   ├── settings.py
+  │   │   ├── urls.py
+  │   │   └── wsgi.py
+  │   └── candidates/
+  │       ├── __init__.py
+  │       ├── models.py
+  │       ├── views.py
+  │       ├── serializers.py
+  │       └── tests.py
+  └── frontend/
+      ├── package.json
+      ├── public/
+      └── src/
+          ├── App.js
+          ├── components/
+          │   ├── CandidateList.js
+          │   ├── CandidateDetail.js
+          │   └── Dashboard.js
+          └── services/
+              └── api.js
+          └── index.js
 
 ---
 
