@@ -141,6 +141,14 @@ The API endpoints for the CRUD operations are documented using **Swagger** for e
 
 This will display all available routes (such as candidate CRUD, job CRUD, etc.) with an interactive UI to test them directly from the browser.
 
+Execute /token/ with your Django user (username and password created in the section: Backend Setup - 4)
+
+Get the "access" value
+
+In the Authorize botton in the top of the page, paste it in this format (you need to write the word Bearer in front of it):
+
+Bearer <your_access_token_value>
+
 
 ## Key Decisions
 

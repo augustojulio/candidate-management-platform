@@ -19,7 +19,7 @@ class Recruiter(models.Model):
 class Job(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    salary = models.DecimalField(max_digits=10, decimal_places=2)
+    salary = models.CharField(max_length=20)
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
 
     def __str__(self):

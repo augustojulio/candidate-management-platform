@@ -142,3 +142,17 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+            'description': 'Enter the JWT token prefixed with "Bearer "',
+            'scheme': 'Bearer',
+            'bearerFormat': 'JWT',
+        },
+    },
+    'USE_SESSION_AUTH': False,
+}
