@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'candidates',
     'corsheaders',
+    'drf_yasg',
 ]
 
 REST_FRAMEWORK = {
