@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../services/api';
+import { Link } from 'react-router-dom';
 
 const CandidateDetail = () => {
     const { id } = useParams();
@@ -20,7 +21,7 @@ const CandidateDetail = () => {
         fetchCandidate();
     }, [id]);
 
-    if (!candidate) return <p>Loading...</p>;
+    if (!candidate) return <p>Candidate not found</p>;
 
     return (
         <div>
@@ -30,7 +31,9 @@ const CandidateDetail = () => {
             <p><strong>Job:</strong> {candidate.job}</p>
             <p><strong>Client:</strong> {candidate.client}</p>
             <p><strong>Recruiter:</strong> {candidate.recruiter}</p>
-            {/* Add more details as needed */}
+            <br></br>
+            <p><Link to="/candidates">View Candidates</Link></p>
+            <p><Link to="/dashboard">View Dashboard</Link></p>
         </div>
     );
 };

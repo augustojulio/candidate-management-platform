@@ -1,6 +1,7 @@
 // src/components/CandidateList.js
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
+import { Link } from 'react-router-dom';
 
 const CandidateList = () => {
     const [candidates, setCandidates] = useState([]);
@@ -112,6 +113,9 @@ const CandidateList = () => {
                     ))}
                 </tbody>
             </table>
+            <br></br>
+            <p><Link to="/dashboard">View Dashboard</Link></p>
+            <p><Link to="/candidates/:id">View Candidate Detail</Link></p>
         </div>
     );
 };
