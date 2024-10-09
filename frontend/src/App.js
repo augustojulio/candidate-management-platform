@@ -30,6 +30,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CandidateList from './components/CandidateList';
 import CandidateDetail from './components/CandidateDetail';
 import Dashboard from './components/Dashboard';
+import Login from './components/Login';
 
 function App() {
   console.log('App is rendering');
@@ -37,6 +38,9 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+          {/* Route for Login */}
+          <Route path="/login" element={<Login />} />
+
           {/* Route for Dashboard */}
           <Route path="/dashboard" element={<Dashboard />} />
 
@@ -47,7 +51,7 @@ function App() {
           <Route path="/candidates/:id" element={<CandidateDetail />} />
 
           {/* Default route */}
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Login />} />
         </Routes>
       </div>
     </Router>
