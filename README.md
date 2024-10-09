@@ -126,14 +126,12 @@ To run the unit tests for the backend:
 
 1. Execute the following command:
    ```bash
-   docker-compose exec web manage.py test
+   docker-compose exec web python manage.py test
    ```
 
 ---
 
 ## API Documentation with Swagger
-
-
 
 The API endpoints for the CRUD operations are documented using **Swagger** for easy access and interaction. After running the backend, you can access the API documentation at:
 
@@ -149,6 +147,18 @@ In the Authorize botton in the top of the page, paste it in this format (you nee
 
 Bearer <your_access_token_value>
 
+After authorizing the API, you need to create a Client, then a Job, then a Recruiter and finally a Candidate.
+
+Remember that when creating a Job, Swagger will give the example json:
+
+`{
+"title": "string",
+"description": "string",
+"salary": "string",
+"client": 0
+}`
+
+Check your client_id, as it will start at 1 and not 0.
 
 ## Key Decisions
 
