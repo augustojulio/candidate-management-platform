@@ -1,4 +1,3 @@
-
 # Candidate Management Platform
 
 A simple platform to manage candidates in a recruitment process, built with Django (Backend) and React (Frontend).
@@ -18,8 +17,46 @@ A simple platform to manage candidates in a recruitment process, built with Djan
 - **Backend**: Django with Django Rest Framework.
 - **Frontend**: ReactJS.
 - **Database**: PostgreSQL.
-- **Testing**: Pytest for unit tests.
+- **Testing**: Unittest for unit tests.
 - **Docker**: Docker setup for containerization.
+
+  candidate-management-platform/
+
+  |
+  ├──backend/
+  │
+  ├── Dockerfile
+  ├── docker-compose.yml
+  ├── pyproject.toml
+  ├── poetry.lock
+  ├── manage.py
+  ├── backend/
+  │   ├── __init__.py
+  │   ├── settings.py
+  │   ├── urls.py
+  │   └── wsgi.py
+  └── candidates/
+  |    ├── __init__.py
+  |    ├── models.py
+  |    ├── views.py
+  |    ├── serializers.py
+  └──└── tests.py
+
+  ├──frontend/
+  |
+
+  ├── package.json
+
+  ├── public/
+  ├── src/
+  │   ├── App.js
+  │   ├── components/
+  │   │   ├── CandidateList.js
+  │   │   ├── CandidateDetail.js
+  │   │   └── Dashboard.js
+  │   ├── services/
+  │   │   └── api.js
+  └── └── index.js
 
 ---
 
@@ -38,7 +75,7 @@ A simple platform to manage candidates in a recruitment process, built with Djan
 
    ```bash
    git clone git@github.com:augustojulio/candidate-management-platform.git
-   cd candidate_management
+   cd candidate-management-platform/backend
    ```
 2. Build and run the Docker containers:
 
@@ -48,6 +85,7 @@ A simple platform to manage candidates in a recruitment process, built with Djan
 3. Run migrations:
 
    ```bash
+   docker-compose exec web python manage.py makemigrations candidates
    docker-compose exec web python manage.py migrate
    ```
 4. Create a superuser for the admin panel:
@@ -66,7 +104,7 @@ A simple platform to manage candidates in a recruitment process, built with Djan
 1. Navigate to the frontend folder:
 
    ```bash
-   cd candidate-management-frontend
+   cd candidate-management-platform/frontend
    ```
 2. Install the dependencies:
 
