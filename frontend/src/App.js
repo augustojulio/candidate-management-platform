@@ -38,13 +38,13 @@ function App() {
       <div className="App">
         <Routes>
           {/* Route for Dashboard */}
-          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/dashboard" element={<Dashboard />} />
 
           {/* Route for the list of candidates */}
-          <Route path="/candidates" exact component={CandidateList} />
+          <Route path="/candidates" element={<CandidateList />} />
 
           {/* Route for candidate details (using candidate ID) */}
-          <Route path="/candidates/:id" component={CandidateDetail} />
+          <Route path="/candidates/:id" element={<CandidateDetail />} />
 
           {/* Default route */}
           <Route path="/" element={<Dashboard />} />
