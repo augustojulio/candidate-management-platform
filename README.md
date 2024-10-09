@@ -126,10 +126,21 @@ To run the unit tests for the backend:
 
 1. Execute the following command:
    ```bash
-   docker-compose exec web pytest
+   docker-compose exec web manage.py test
    ```
 
 ---
+
+## API Documentation with Swagger
+
+
+
+The API endpoints for the CRUD operations are documented using **Swagger** for easy access and interaction. After running the backend, you can access the API documentation at:
+
+`http://localhost:8000/swagger/`
+
+This will display all available routes (such as candidate CRUD, job CRUD, etc.) with an interactive UI to test them directly from the browser.
+
 
 ## Key Decisions
 
@@ -137,7 +148,7 @@ To run the unit tests for the backend:
 - **React** was chosen for its flexibility and capability to build dynamic user interfaces.
 - **JWT** for secure authentication.
 - **SOLID Principles** and **Design Patterns** were applied to ensure the backend's scalability and maintainability.
-- Unit tests were added with **pytest** to ensure the correctness of models and API endpoints.
+- Unit tests were added with **unittest** to ensure the correctness of models and API endpoints.
 
 ---
 
