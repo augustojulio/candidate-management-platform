@@ -32,7 +32,135 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Aplicar cores básicas ao body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F0F0F0;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilizar cabeçalhos */
+h1,
+h2,
+h3 {
+  color: #D0021B;
+}
+
+/* Links e navegação */
+a {
+  color: #D0021B;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff3333;
+  text-decoration: underline;
+}
+
+/* Estilizando botões */
+button {
+  background-color: #D0021B;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #A00017;
+}
+
+/* Estilizando containers e seções */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard {
+  background-color: white;
+  border: 1px solid #D0021B;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de métricas na dashboard */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.candidate-list {
+  background-color: white;
+  border: 1px solid #D0021B;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.candidate-list li {
+  padding: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.candidate-list li:last-child {
+  border-bottom: none;
+}
+
+.candidate-list li a {
+  color: #D0021B;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.candidate-list li a:hover {
+  color: #A00017;
+}
+
+.candidate-detail {
+  background-color: white;
+  border: 1px solid #D0021B;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-detail p {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.candidate-detail p strong {
+  color: #D0021B;
+  font-weight: bold;
 }

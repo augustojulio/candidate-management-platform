@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import { Link } from 'react-router-dom';
+import '../App.css';
 
 const Dashboard = () => {
     const [metrics, setMetrics] = useState({
@@ -25,17 +26,19 @@ const Dashboard = () => {
     }, []);
 
     return (
-        <div>
+        <div className="container">
             <h1>Dashboard</h1>
-            <ul>
-                <li>Open Jobs: {metrics.openJobs}</li>
-                <li>Active Candidates: {metrics.activeCandidates}</li>
-                <li>Disqualified Candidates: {metrics.disqualifiedCandidates}</li>
-                <li>Hired Candidates: {metrics.hiredCandidates}</li>
-                <li></li>
-                <li><Link to="/candidates">View Candidates</Link></li>
-                <li><Link to="/candidates/:id">View Candidate Detail</Link></li>
-            </ul>
+            <div className="dashboard">
+                <ul>
+                    <li>Open Jobs: {metrics.openJobs}</li>
+                    <li>Active Candidates: {metrics.activeCandidates}</li>
+                    <li>Disqualified Candidates: {metrics.disqualifiedCandidates}</li>
+                    <li>Hired Candidates: {metrics.hiredCandidates}</li>
+                    <li></li>
+                    <li><Link to="/candidates">View Candidates</Link></li>
+                    <li><Link to="/candidates/:id">View Candidate Detail</Link></li>
+                </ul>
+            </div>
         </div>
     );
 };

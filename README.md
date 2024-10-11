@@ -147,18 +147,13 @@ After authorizing the API, you need to create a Client, then a Job, then a Recru
 
 Remember that when creating a Job, Swagger will give the example json:
 
-`{
-"title": "string",
-"description": "string",
-"salary": "string",
-"client": 0
-}`
+`{ "title": "string", "description": "string", "salary": "string", "client": 0 }`
 
 Check your client_id, as it will start at 1 and not 0.
 
 And, in your frontend View_Candidate_Detail, you need to manually pass the candidate's :id number in the url:
 
-http://localhost:3000/candidates/:id
+`http://localhost:3000/candidates/:id`
 
 ## Key Decisions
 
@@ -172,6 +167,8 @@ http://localhost:3000/candidates/:id
 
 ## Next Steps
 
-- Improve frontend design and user experience.
-- Add pagination and more advanced filtering options.
-- Enhance the dashboard with more metrics and visual representations.
+- Chore: Increase JWT token expiration time
+- Feature: Allow process status update
+- Improvement: Retrieve automatically candidate's id to use it in the View_Candidate_Detail
+- Improvement: Add pagination and more advanced filtering options.
+- Improvement: Enhance the dashboard with more metrics and visual representations.

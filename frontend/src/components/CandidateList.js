@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import { Link } from 'react-router-dom';
+import '../App.css';
 
 const CandidateList = () => {
     const [candidates, setCandidates] = useState([]);
@@ -58,64 +59,66 @@ const CandidateList = () => {
     };
 
     return (
-        <div>
+        <div className='container'>
             <h1>Candidate List</h1>
+            <div className='candidate-list'>
 
-            {/* Search input */}
-            <input
-                type="text"
-                placeholder="Search candidates..."
-                value={searchTerm}
-                onChange={(e) => handleSearch(e.target.value)}
-            />
+                {/* Search input */}
+                <input
+                    type="text"
+                    placeholder="Search candidates..."
+                    value={searchTerm}
+                    onChange={(e) => handleSearch(e.target.value)}
+                />
 
-            {/* Status filter */}
-            <select
-                value={statusFilter}
-                onChange={(e) => handleStatusFilter(e.target.value)}
-            >
-                <option value="">All Statuses</option>
-                <option value="in process">In Process</option>
-                <option value="hired">Hired</option>
-                <option value="disqualified">Disqualified</option>
-            </select>
+                {/* Status filter */}
+                <select
+                    value={statusFilter}
+                    onChange={(e) => handleStatusFilter(e.target.value)}
+                >
+                    <option value="">All Statuses</option>
+                    <option value="in process">In Process</option>
+                    <option value="hired">Hired</option>
+                    <option value="disqualified">Disqualified</option>
+                </select>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Status</th>
-                        <th>Update Status</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {filteredCandidates.map((candidate) => (
-                        <tr key={candidate.id}>
-                            <td>{candidate.id}</td>
-                            <td>{candidate.name}</td>
-                            <td>{candidate.status}</td>
-                            <td>
-                                <select
-                                    value={candidate.status}
-                                    onChange={(e) => updateCandidateStatus(candidate.id, e.target.value)}
-                                >
-                                    <option value="in process">In Process</option>
-                                    <option value="hired">Hired</option>
-                                    <option value="disqualified">Disqualified</option>
-                                </select>
-                            </td>
-                            <td>
-                                <a href={`/candidates/${candidate.id}`}>View Details</a>
-                            </td>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Update Status</th>
+                            <th>Details</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-            <br></br>
-            <p><Link to="/dashboard">View Dashboard</Link></p>
-            <p><Link to="/candidates/:id">View Candidate Detail</Link></p>
+                    </thead>
+                    <tbody>
+                        {filteredCandidates.map((candidate) => (
+                            <tr key={candidate.id}>
+                                <td>{candidate.id}</td>
+                                <td>{candidate.name}</td>
+                                <td>{candidate.status}</td>
+                                <td>
+                                    <select
+                                        value={candidate.status}
+                                        onChange={(e) => updateCandidateStatus(candidate.id, e.target.value)}
+                                    >
+                                        <option value="in process">In Process</option>
+                                        <option value="hired">Hired</option>
+                                        <option value="disqualified">Disqualified</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <a href={`/candidates/${candidate.id}`}>View Details</a>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                <br></br>
+                <p><Link to="/dashboard">View Dashboard</Link></p>
+                <p><Link to="/candidates/:id">View Candidate Detail</Link></p>
+            </div>
         </div>
     );
 };
