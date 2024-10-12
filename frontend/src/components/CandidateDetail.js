@@ -28,6 +28,7 @@ const CandidateDetail = () => {
         <div className='container'>
             <h1>Candidate Details</h1>
             <div className='candidate-detail'>
+                <p><strong>ID:</strong> {id}</p>
                 <p><strong>Name:</strong> {candidate.name}</p>
                 <p><strong>Status:</strong> {candidate.status}</p>
                 <p><strong>Job:</strong> {candidate.job}</p>

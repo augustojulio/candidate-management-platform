@@ -109,7 +109,7 @@ const CandidateList = () => {
                                     </select>
                                 </td>
                                 <td>
-                                    <a href={`/candidates/${candidate.id}`}>View Details</a>
+                                    <a href={`/candidates/${candidate.id}`}>View Candidate Details</a>
                                 </td>
                             </tr>
                         ))}
@@ -117,7 +117,6 @@ const CandidateList = () => {
                 </table>
                 <br></br>
                 <p><Link to="/dashboard">View Dashboard</Link></p>
-                <p><Link to="/candidates/:id">View Candidate Detail</Link></p>
             </div>
         </div>
     );

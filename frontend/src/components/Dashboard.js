@@ -36,7 +36,6 @@ const Dashboard = () => {
                     <li>Hired Candidates: {metrics.hiredCandidates}</li>
                     <li></li>
                     <li><Link to="/candidates">View Candidates</Link></li>
-                    <li><Link to="/candidates/:id">View Candidate Detail</Link></li>
                 </ul>
             </div>
         </div>

@@ -149,10 +149,6 @@ Remember that when creating a Job, Swagger will give the example json:
 
 Check your client_id, as it will start at 1 and not 0.
 
-And, in your frontend View_Candidate_Detail, you need to manually pass the candidate's :id number in the url:
-
-`http://localhost:3000/candidates/:id`
-
 ## Key Decisions
 
 - **Django Rest Framework** was chosen for its simplicity in creating APIs with Django.
@@ -165,8 +161,7 @@ And, in your frontend View_Candidate_Detail, you need to manually pass the candi
 
 ## Next Steps
 
-- Feature: Allow process status update
-- Improvement: Retrieve automatically candidate's id to use it in the View_Candidate_Detail
+- Feature: Allow process status update on CandidateList
 - Improvement: Add pagination and more advanced filtering options.
 - Improvement: Enhance the dashboard with more metrics and visual representations.
 - Create logout button
