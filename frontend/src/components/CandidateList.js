@@ -46,7 +46,7 @@ const CandidateList = () => {
 
     const updateCandidateStatus = async (id, newStatus) => {
         try {
-            await api.put(`/candidates/${id}/`, { status: newStatus });
+            await api.patch(`/candidates/${id}/`, { status: newStatus });
             const updatedCandidates = candidates.map((candidate) =>
                 candidate.id === id ? { ...candidate, status: newStatus } : candidate
             );
