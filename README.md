@@ -141,8 +141,6 @@ In the Authorize botton in the top of the page, paste it in this format (you nee
 
 Bearer <your_access_token_value>
 
-The token expiration time is short
-
 After authorizing the API, you need to create a Client, then a Job, then a Recruiter and finally a Candidate.
 
 Remember that when creating a Job, Swagger will give the example json:
@@ -167,8 +165,8 @@ And, in your frontend View_Candidate_Detail, you need to manually pass the candi
 
 ## Next Steps
 
-- Chore: Increase JWT token expiration time
 - Feature: Allow process status update
 - Improvement: Retrieve automatically candidate's id to use it in the View_Candidate_Detail
 - Improvement: Add pagination and more advanced filtering options.
 - Improvement: Enhance the dashboard with more metrics and visual representations.
+- Create logout button
