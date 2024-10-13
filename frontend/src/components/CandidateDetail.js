@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../services/api';
 import { Link } from 'react-router-dom';
+import LogoutButton from './LogoutButton';
 import '../App.css';
 
 const CandidateDetail = () => {
@@ -36,6 +37,7 @@ const CandidateDetail = () => {
                 <br></br>
                 <p><Link to="/candidates">View Candidates</Link></p>
                 <p><Link to="/dashboard">View Dashboard</Link></p>
+                <LogoutButton />
             </div>
         </div>
     );

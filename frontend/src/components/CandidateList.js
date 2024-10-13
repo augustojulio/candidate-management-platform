@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import { Link } from 'react-router-dom';
+import LogoutButton from './LogoutButton';
 import '../App.css';
 
 const CandidateList = () => {
@@ -117,6 +118,7 @@ const CandidateList = () => {
                 </table>
                 <br></br>
                 <p><Link to="/dashboard">View Dashboard</Link></p>
+                <LogoutButton />
             </div>
         </div>
     );
