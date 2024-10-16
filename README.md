@@ -161,5 +161,7 @@ Check your client_id, as it will start at 1 and not 0.
 
 ## Next Steps
 
+- Display a "Not Found" message when the route doesn't exist.
+- Add a favicon and a title.
 - Improvement: Add pagination and more advanced filtering options.
 - Improvement: Enhance the dashboard with more metrics and visual representations.
