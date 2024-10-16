@@ -19,6 +19,8 @@ A simple platform to manage candidates in a recruitment process, built with Djan
 - **Database**: PostgreSQL.
 - **Testing**: Unittest for unit tests.
 - **Docker**: Docker setup for containerization.
+- **Poetry**: Poetry for dependence management.
+- **Swagger**: Swagger for API documentation.
 
   ```
   candidate-management-platform/
